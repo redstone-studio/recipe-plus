@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "recipe_plus",
+  "version": "${version}",
+  "name": "recipe_plus",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/recipe_plus/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.redstonestudio.recipe_plus.client.RecipePlusClient"
+    ],
+    "main": [
+      "org.redstonestudio.recipe_plus.RecipePlus"
+    ]
+  },
+  "mixins": [
+    "recipe_plus.mixins.json",
+    {
+      "config": "recipe_plus.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
